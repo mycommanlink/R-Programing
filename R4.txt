@@ -1,0 +1,49 @@
+ PRACTICAL NO - 4 
+
+ A- IMPLEMENT NORMAL DISTRIBUTION  (Dnorm, Pnorm, Qnorm, Rnorm)
+ 1. Dnorm 
+x<-seq(0,4,by=0.1)
+print(x)
+y<-dnorm(x, mean(x), sd(x))
+plot(x,y,xlab="x=axis", ylab="y axis", col="red", type = "line")
+
+2. Pnorm 
+x<-seq (0,4, by=0.1)
+print(x)
+y<-pnorm(x, mean(x), sd(x))
+plot(x,y,xlab="x=axis", ylab = "y axis", col="blue", type = "line")
+
+3. Rnorm
+x<-seq(0,4,by=0.1)
+print(x)
+y<-rnorm(x, mean(x), sd(x))
+plot(x,y, xlab="x axis", ylab="y axis", col="blue", type = "line")
+
+4. Qnorm
+x<-seq(0,4,by=0.1)
+print(x)
+y<-qnorm(x,mean(x), sd(x))
+plot(x,y,xlab="x axis", ylab = "y axis", col="blue", type = "line")
+
+B- BINOMIAL DISTRIBUTION 
+1. Pbinom 
+pbinom(3, size=13, prob = 1/6) 
+plot(0:10, pbinom (0:10, size=10, prob=1/6), type = "l")
+
+2. Dbinom 
+
+dbinom (3, size=13, prob = 1/6) 
+probabilities<-dbinom(x=c(0:10), size=10, prob=1/6) 
+plot (0:10, probabilities, type = "l")
+
+3. Qbinom 
+
+qbinom(0.8419226, size=13, prob=1/6)
+x <-seq(0, 1, by = 0.1) 
+y <-qbinom(x, size=13, prob=1/6) 
+plot(x, y, type = 'l')
+
+4. Rbinom 
+
+rbinom(8,size=13,prob=1/6) 
+hist(rbinom(8,size=13,prob=1/6))

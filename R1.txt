@@ -1,0 +1,73 @@
+                                                               PRACTICAL NO  1 
+
+A - Write an R Program to implement expressions , assignment and decision making.
+
+A - IF ELSE 
+
+x<-"FYDS"
+if(is.character(x)){
+  print("x is a character")
+}else
+{
+  print("x is not a character")
+}
+
+A - SWITCH 
+
+y<-"12"
+x<-switch(y, "9"="Good Mornig",
+          "12"="Good Afternoon",
+          "18"="Good Evening",
+          "21"="Good Night")
+print(x)
+
+B - Write an R Program to design and implement loops. 
+
+B - WHILE LOOP 
+
+v <- 9 
+while (v > 5)
+{
+  print(v)
+  v=v-1}
+
+B - REPEAT LOOP 
+
+v <-9
+repeat {
+  print(v)
+  v=v-1
+  if(v < 1) {
+    break 
+  }
+  }
+
+B - FOR LOOP 
+
+v<-c(1:5)
+for (i in v)
+  {
+  print(i)
+  }
+
+C - Write a R program to demonstrate the use of essential data structures in R
+[Hint: Vectors, Matrix, Arrays]
+
+C - ARRAY 
+
+v1 <-c(1:5)
+v2 <-c(6:10) 
+v<-array(c(v1, v2))
+print (v)
+
+C- VECTOR 
+
+a <- c(3,4,5,6)
+b<- c(3,4,5,6)
+add <- a+b
+print (add)
+
+C - MATRIX
+
+mat<-matrix(1:9,nrow=3,ncol=3,byrow=TRUE)
+print (mat)

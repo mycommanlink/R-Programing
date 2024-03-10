@@ -1,0 +1,73 @@
+A. Write an R program to demonstrate various error messages in R Programming
+
+1.
+as.numeric(c("5", "6", "seven"))
+
+2. 
+"hello" + "world"
+
+3. 
+f <- function() {
+  message("This is a message.")
+}
+f()
+
+b. Write an R program to implement Error Handling in R
+[Hint : warning( ), stop( ),try( ), tryCatch( ),Callinghandlers( )]
+
+1. STOP 
+if (1 != 2) 
+  stop("something is wrong")
+
+2. WARNING 
+  squarex <- function(x) {
+  if (is.character (x)) {
+    warning("Converting x to numeric")
+    x <- as.numeric(x)
+  } else {
+    message("x appears to be numeric")
+  }
+  X^2
+}
+squarex("4")
+
+3. trycatch 
+# R program illustrating error handling
+# Applying trycatch 
+tryCatch(
+  # Specifying expression
+  expr = {
+    1 + 1
+    print("Everything was fine.")
+  },
+  # Specifying error message 
+  error = function(e) {
+    print("There was an error message.")
+  },
+  # Specifying warning message
+  warning = function(w) {
+    print("There was a warning message.")
+  },
+  finally = {
+    print("Finally Executed")
+  }
+)
+
+4. CALLING HANDLERS 
+# R program illustrating error handling
+# Evaluation of trycatch
+check <- function(expression) {
+  withCallingHandlers(expression,
+                      warning = function(w) {
+                        message("warning:\n", w)
+                      },
+                      error = function(e) {
+                        message("error:\n", e)
+                      },
+                      finally = {
+                        message("Completed")
+                      })
+}
+check({10/2})
+check({10/0})
+check({10/'noe'})

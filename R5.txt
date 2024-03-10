@@ -1,0 +1,55 @@
+PRACTICAL NO 5
+A. Write an R program to store and access string in R objects (vectors, matrix,arrays, data frames, and lists)
+1. VECTORS 
+string_vector<-c("apple", "banana", "Kiwi", "grape") 
+print(string_vector)
+print(string_vector[2])
+
+2. MATRIX 
+string_matrix<-matrix(c("Buggati", "BMW", "Toyota", "Audi"), nrow=2, ncol = 2)
+print(string_matrix)
+print(string_matrix[1,2])
+
+3. Array 
+string_array<-array(c("Ather", "Jupitar", "Activa", "Access"), dim = c(2, 2, 2))
+print(string_array)
+print(string_array[1,2,1])
+
+4. DATA FRAMES
+string_data_frame<-data.frame(animals = c("olivia", "Bob", "Jack", "Oggy"), age = c(5, 7, 6, 5))
+print(string_data_frame)
+print(string_data_frame$age)
+
+5. LIST 
+string_list<-list(phones = c("apple", "Samsung", "Vivo", "Oppo"), 
+                  colors = c("black", "white", "gold", "purple"))
+print(string_list)
+print(string_list$phones)
+
+B. Write an R program to demonstrate use of various string manipulation functions. 
+[Hint: paste(), print(),no quote(),format(), cat(),to String(), sprint()]
+
+1. PASTE 
+stringl <- "Hello"
+string2 <- "world"
+string <- paste (stringl, string2, sep =" " )
+print(string)
+
+2. PRINT 
+string1<- "hello"
+print(string1)
+
+3. No Quote 
+string1 <- "Pillai"
+string2 <- "COllege "
+noquote_string <- noquote(paste (string1, string2))
+print(noquote_string)
+
+4. Cat 
+string1<-"hello"
+string2<-"world"
+cat(string1,string2,"\n")
+
+5. toString
+to_string <- toString(c("apple", "banana", "Mango"))
+print(to_string)

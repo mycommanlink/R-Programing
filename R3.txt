@@ -1,0 +1,32 @@
+ PRACTICAL NO 3
+
+A- A. Write an R program to apply built-in statistical functions.
+[Hint: mean, median, standard deviation]
+
+A - mean,median , sd, mode 
+x<-c(20, 15, 16, 26, 40)
+mean(x)
+median(x)
+sd(x)
+
+getmode<-function(v)
+{
+  uniquev<-unique(v)
+  uniquev[which.max(tabulate (match(v, uniquev)))]
+}
+v<-c(2,3,3,4,5,6,3)
+r<-getmode (v)
+print(r) 
+
+B. Write an R program to demonstrate Linear and Multiple Regression analysis.
+
+B - LINEAR REGRESSION 
+
+v <-c(23, 45, 66, 56) 
+u <-c(2, 3, 5, 6)
+s <-data.frame(u=4) 
+r <-lm(v~u)
+print(r)
+result<-predict(r,s)
+plot(v,xlab="height", ylab="weight", main="Height & weight", name.arg=u, col="orange", type="line")
+print(result)

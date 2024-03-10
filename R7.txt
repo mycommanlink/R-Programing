@@ -1,0 +1,42 @@
+PRACTICAL NO 7
+
+A. A. Write an R program to learn about Tabulation and related concepts [Hint:
+Contingency Tables, Selection of Parts, Conversion, Complex
+Tables,Cross Tabulation]
+
+1. CONTINGENCY TABLE 
+gender <- c("Male", "Female", "male", "male", "Female")
+age <- c(25, 30, 35, 40, 45)
+employed <- c(TRUE, TRUE, FALSE, FALSE, TRUE)
+data <- data.frame(gender, age, employed)
+contingency_table <- table(data$gender, data$employed)
+print("Contingency Table:")
+print(contingency_table)
+
+2. SELECTION OF PARTS 
+selected_data <-subset(data, age>30) 
+print("selected Data where Age > 30:") 
+print(selected_data)
+
+3. CONVERSION 
+contingency_matrix <-as.matrix(contingency_table) 
+print("Contingency Matrix:")
+print(contingency_matrix)
+
+B. Write an R program to demonstrate various ways of performing Graphical analysis.
+[Hint: Plots, Special Plots, Storing Graphics] 
+
+1. PLOTS
+library(ggplot2)
+data <- data.frame(Student_ID =1:10,
+                Maths_Marks =c(35, 42, 28, 48, 39, 45, 20, 37, 44, 30))
+ggplot(data, aes (x= factor(Student_ID), y= Maths_Marks)) +
+  geom_point(color="red", alpha=1)
+
+2. SPECIAL PLOT 
+data <- data.frame(Student_ID=1:10,
+                   Maths_Marks=c(35, 42, 28, 48, 39, 45, 20, 37, 44, 30))
+ggplot(data, aes(x=factor(Student_ID), y=Maths_Marks, fill=Maths_Marks)) +
+  geom_bar (stat="identity") +
+  scale_fill_gradient (low = "blue",high = "red")
+
